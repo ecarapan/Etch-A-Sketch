@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* border: 1px solid red;  */
 }
 
 body {
@@ -31,4 +30,5 @@ body {
     height: 30px;
     width: 30px;
     border-radius: 3px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5)
 }

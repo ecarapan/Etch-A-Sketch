@@ -1,6 +1,7 @@
 const grid = document.querySelector('#grid');
 createGrid(16);
 
+//Button click event listener.
 document.querySelector('.size-button').addEventListener('click', (e) => {
     let size = getSize();
     //Will fail if size is undefined.
@@ -12,10 +13,6 @@ document.querySelector('.size-button').addEventListener('click', (e) => {
     }
     createGrid(size);
 });
-
-document.querySelectorAll('.square').forEach(square => square.addEventListener('mouseenter', (e) => {
-    e.target.style.backgroundColor = 'rgb(173, 216, 230)';
-}));
 
 function createGrid(size) {
     for (let i = 0; i < size; i++) {
@@ -29,12 +26,19 @@ function createGrid(size) {
         grid.appendChild(row);
     }
     setNewSize(size);
+
+    //Square hover event listener.
+    document.querySelectorAll('.square').forEach(square => square.addEventListener('mouseenter', (e) => {
+        e.target.style.backgroundColor = 'rgb(173, 216, 230)';
+    }));
 }
+
+
 
 function getSize() {
     let size = null;
-    while (size <= 0 || size > 64) {
-        size = prompt('Enter number of squares per each size of the grid (1 - 64): ');
+    while (size <= 0 || size > 100) {
+        size = prompt('Enter number of squares per each size of the grid (1 - 100): ');
         if (size === null) break;
     }
     return size;

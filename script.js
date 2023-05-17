@@ -29,7 +29,7 @@ function createGrid(size) {
 
     //Square hover event listener.
     document.querySelectorAll('.square').forEach(square => square.addEventListener('mouseenter', (e) => {
-        e.target.style.backgroundColor = 'white';
+        e.target.style.backgroundColor = `${getRandColor()}`;
     }));
 }
 
@@ -53,3 +53,11 @@ function setNewSize(size) {
     });
 }
 
+function getRandColor() {
+    let hexValues = '0123456789ABCDEF'
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += hexValues.charAt(Math.floor(Math.random() * 16) + 1);
+    }
+    return color;
+}

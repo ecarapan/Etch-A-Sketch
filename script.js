@@ -29,7 +29,7 @@ function createGrid(size) {
 
     //Square hover event listener.
     document.querySelectorAll('.square').forEach(square => square.addEventListener('mouseenter', (e) => {
-        e.target.style.backgroundColor = 'rgb(173, 216, 230)';
+        e.target.style.backgroundColor = 'white';
     }));
 }
 

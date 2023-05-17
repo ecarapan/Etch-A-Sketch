@@ -9,8 +9,9 @@ body {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    background-color: deepskyblue;
 }
 
 #grid {
@@ -18,8 +19,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;   
-    border: 1px solid black;
-    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    margin-top: 80px;
 }
 
 .row {
@@ -27,8 +28,21 @@ body {
 }
 
 .square { 
-    background-color: white;
+    background-color: deepskyblue;
     height: 30px;
     width: 30px;
-    border-radius: 20px;
+}
+
+.size-button {
+    height: 40px;
+    width: 200px;
+    border-radius: 10px;
+    border: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    background-color: deepskyblue;
+    color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    
 }
